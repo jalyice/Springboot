@@ -1,8 +1,7 @@
 package com.example.firstproject.service;
 
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +51,7 @@ public class CommentService {
         return CommentDto.createCommentDto(created);
     }
 
-    @Transactional
+    
     public CommentDto update(Long id, CommentDto dto) {
         // 1. 댓글 조회 및 예외 발생
         Comment target = commentRepository.findById(id)
